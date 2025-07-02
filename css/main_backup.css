@@ -1,0 +1,158 @@
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-Regular.otf") format("opentype"),*/ /* Local directory, because browsers tend to block downloads from online directories sometimes unless it is google fonts. */
+		url("./NewCM10-Regular.ttf") format("truetype"), /* .otf format was insufficient. Only some of the elements of a certain size and weight were being displayed in the required font. */
+		url("./NewCM10-Regular.woff") format("woff"),    /* Hence, used tranfont.org to convert otf to other formats such as ttf, woff, woff2 and eot as well. */
+		url("./NewCM10-Regular.woff2") format("woff2"),  /* Also, you might want to know that otf is downright problematic. That's why it has been commented out.*/
+		url("./NewCM10-Regular.eot") format("eot");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-Bold.otf") format("opentype"),*/
+		url("./NewCM10-Bold.ttf") format("truetype"),
+		url("./NewCM10-Bold.woff") format("woff"),
+		url("./NewCM10-Bold.woff2") format("woff2"),
+		url("./NewCM10-Bold.eot") format("eot");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-Italic.otf") format("opentype"),*/
+		url("./NewCM10-Italic.ttf") format("truetype"),
+		url("./NewCM10-Italic.woff") format("woff"),
+		url("./NewCM10-Italic.woff2") format("woff2"),
+		url("./NewCM10-Italic.eot") format("eot");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-BoldItalic.otf") format("opentype"),*/
+		url("./NewCM10-BoldItalic.ttf") format("truetype"),
+		url("./NewCM10-BoldItalic.woff") format("woff"),
+		url("./NewCM10-BoldItalic.woff2") format("woff2"),
+		url("./NewCM10-BoldItalic.eot") format("eot");
+	font-weight: bold;
+	font-style: italic;
+}
+
+*{
+	box-sizing: border-box;
+	font-family:	   "New Computer Modern";
+	color:		   #000000;
+}
+
+body{
+	font-size: 20px;
+	margin: 8px;
+}
+
+ul{
+	font-size: 20px;
+	list-style: none;
+}
+
+li, a, button{
+	text-decoration: none;
+}
+
+header{
+	display: flex;
+	justify-content: space-between ;
+	align-items: center;
+	padding: 10px;
+	border-top: 0px #FFF solid;
+	border-left: 0px #FFF solid;
+	border-right: 0px #FFF solid;
+	border-bottom: 10px #A6CF97 solid;
+}
+
+.logo {
+	cursor: pointer;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0px 15px;
+}
+
+.nav__links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+	color: #75C44A;
+}
+
+button {
+	padding: 9px 25px;
+	background-color: rgba(166, 207, 151,0.5);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	font-size: 20px;
+	color: #000000;
+}
+
+button:hover{
+	background-color: rgba(166, 207, 151 ,1);
+	color: #FFFFFF;
+}
+
+#page-border{	
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90vw;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#home{
+	display: block;
+	height: 84vh;
+	width: 100%;
+	align-items: center;
+}
+
+#home_content{
+	display: flex;
+	align-content: center;
+}
+
+#home_content_left{
+	display: block;
+	width: 100%;
+}
+
+h1{
+	display: block;
+	font-size: 300%;
+	text-align: center;
+	background-color: rgba(0,0,0,0);
+	color: #000000;
+	border-color: #A6CF97;
+	border-width: 0px;
+	border-style: solid;
+	padding-top: 8rem;
+	padding-bottom: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+h2{
+	font-size: 200%;
+	text-align: center;
+}
+
+h3{
+	font-size: 120%;
+	text-align: center;
+}

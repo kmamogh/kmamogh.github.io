@@ -1,0 +1,318 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap');
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-Regular.otf") format("opentype"),*/ /* Local directory, because browsers tend to block downloads from online directories sometimes unless it is google fonts. */
+		url("./NewCM10-Regular.ttf") format("truetype"), /* .otf format was insufficient. Only some of the elements of a certain size and weight were being displayed in the required font. */
+		url("./NewCM10-Regular.woff") format("woff"),    /* Hence, used tranfont.org to convert otf to other formats such as ttf, woff, woff2 and eot as well. */
+		url("./NewCM10-Regular.woff2") format("woff2"),  /* Also, you might want to know that otf is downright problematic. That's why it has been commented out.*/
+		url("./NewCM10-Regular.eot") format("eot");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-Bold.otf") format("opentype"),*/
+		url("./NewCM10-Bold.ttf") format("truetype"),
+		url("./NewCM10-Bold.woff") format("woff"),
+		url("./NewCM10-Bold.woff2") format("woff2"),
+		url("./NewCM10-Bold.eot") format("eot");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-Italic.otf") format("opentype"),*/
+		url("./NewCM10-Italic.ttf") format("truetype"),
+		url("./NewCM10-Italic.woff") format("woff"),
+		url("./NewCM10-Italic.woff2") format("woff2"),
+		url("./NewCM10-Italic.eot") format("eot");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: "New Computer Modern";
+	src: /*url("./NewCM10-BoldItalic.otf") format("opentype"),*/
+		url("./NewCM10-BoldItalic.ttf") format("truetype"),
+		url("./NewCM10-BoldItalic.woff") format("woff"),
+		url("./NewCM10-BoldItalic.woff2") format("woff2"),
+		url("./NewCM10-BoldItalic.eot") format("eot");
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+/* BASE STYLES */
+body{
+	font-family: "Hind Mysuru", sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+
+mark{
+	background-color: #b3ffbf66;
+	color:#75C44A;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+strong{
+	font-weight: 600;
+}
+
+/* NORMAL STYLES */
+
+.page__border{
+	background-color: #FFF;
+	margin: 0px;
+	padding: 0px;
+}
+
+.header{
+	background-color: #ffffff ;
+	opacity: 1;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+}
+
+
+.header__content{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.navbar{
+	padding: 20px 0px;
+}
+
+.nav__list{
+	display: flex;
+	column-gap: 20px;
+	row-gap: 10px;
+}
+
+.nav__item{
+}
+
+.nav__link{
+	color: #006611;
+	transition: all 0.4s ease;
+	position: relative;
+}
+
+.nav__link:hover,
+.nav__link:focus{
+	color: #569a6e;
+	border-radius: 1000px;
+	font-size: 1.0em;
+}
+
+.nav__link::after{
+	content: "";
+	height: 10%;
+	width: 100%;
+	background-color: #569a6e;
+	display: block;
+	position: absolute;
+	left: -3%;
+	bottom: -3%;
+	border-radius: 21px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.nav__link:hover::after{
+	opacity: 1;
+}
+
+.home__page{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	max-width: 940px;
+	padding-bottom: 16vh;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: auto;
+	padding-right: auto;
+	padding-top: 18vh;
+}
+
+.site__heading{
+	font-size: 150%;
+	width: 100%;
+	margin-bottom: 4vh;
+	color: #000;
+	color: #569a6e;
+	text-align: center;
+	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
+}
+
+.site__subheading{
+	font-size: 100%;
+}
+
+.main__content {
+	/*border-color: #000;
+	border-style: solid;
+	border-width: 2px;*/
+	display:flex;
+	flex-direction: row;
+	column-gap: 40px;
+	color: #000;
+	background-color: #FFFFFF;
+	align-items: center;
+	justify-content: center;i
+	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
+}
+
+.main__content__left{
+	width: 70%;
+	/*border-width: 1px;
+	border-color: green;
+	border-style: dashed;*/
+	margin: auto;
+	/*background-color: rgba(140,197,110,0.4);*/
+	border-radius: 20px;
+	padding: 10px;
+	margin-left: 10px;
+	text-align: left;
+	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
+}
+
+.main__content__right{
+	width: 30%;
+	/*border-width: 1px;
+	margin: auto;
+	border-color: green;
+	border-style: dashed;*/
+	border-radius: 20px;
+	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
+}
+
+#img1{
+	width: 300px;
+	height: 300px;
+}
+
+.main__content__heading{
+	text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 950px) {
+	.header__content{
+		flex-direction: column;
+		padding: 20px;
+	}
+	
+	.home__page{
+		padding-top: 150px;
+	}
+	
+	.main__content{
+		flex-direction: column;
+		row-gap: 20px;
+    max-width: inherit;
+  }
+	
+	.main__content__left{
+	  width: 90vw;
+	  margin: 10px;
+		padding: 10px;
+	  text-align: left;
+  }
+
+  .main__content__right{
+		width: 90vw;
+    margin: 10px;
+		padding: 10px;
+    text-align: center;
+  }
+	
+	#img1{
+  	width: 80%;
+		height: 100%
+  }
+	
+}
+
+@media (max-width: 635px) {
+	.nav__list{
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.home__page{
+	   padding-top: 340px;
+	}
+	
+	.main__content{
+		flex-direction: column;
+    max-width: inherit;
+  }
+	
+	.main__content__left{
+		width: 90vw;
+		margin: auto;
+		text-align: left;
+		padding: 10px;
+		margin: 10px;
+  }
+
+  .main__content__right{
+		width: 90vw;
+		margin: auto;
+		text-align: center;
+	  padding: 10px;
+		margin: 10px;
+  }
+	
+	#img1{
+		width: 100%;
+	  height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
