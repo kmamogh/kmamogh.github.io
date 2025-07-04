@@ -97,7 +97,6 @@ strong{
 	top: 0px;
 }
 
-
 .header__content{
 	display:flex;
 	flex-direction: row;
@@ -148,7 +147,7 @@ strong{
 	opacity: 1;
 }
 
-.home__page{
+.main__page{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -163,8 +162,8 @@ strong{
 	padding-top: 18vh;
 }
 
-.site__heading{
-	font-size: 150%;
+.webpage__heading{
+	font-size: 200%;
 	width: 100%;
 	margin-bottom: 4vh;
 	color: #000;
@@ -173,22 +172,39 @@ strong{
 	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
 }
 
-.site__subheading{
-	font-size: 100%;
+.webpage__subheading{
+	font-size: 60%;
 }
 
-.main__content {
+#home_page_content.main__content {
 	/*border-color: #000;
 	border-style: solid;
 	border-width: 2px;*/
+	font-size: 80%;
 	display:flex;
 	flex-direction: row;
 	column-gap: 40px;
 	color: #000;
 	background-color: #FFFFFF;
 	align-items: center;
-	justify-content: center;i
+	justify-content: center;
 	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
+}
+
+#research_page_content.main__content {
+	/*border-color: #000;
+	border-style: solid;
+	border-width: 2px;*/
+	font-size: 100%;
+	display:flex;
+	flex-direction: column;
+	row-gap: 40px;
+	color: #000;
+	background-color: #FFFFFF;
+	align-items: center;
+	justify-content: center;
+	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
+	
 }
 
 .main__content__left{
@@ -196,11 +212,9 @@ strong{
 	/*border-width: 1px;
 	border-color: green;
 	border-style: dashed;*/
-	margin: auto;
 	/*background-color: rgba(140,197,110,0.4);*/
-	border-radius: 20px;
-	padding: 10px;
 	margin-left: 10px;
+	border-radius: 20px;
 	text-align: left;
 	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
 }
@@ -211,32 +225,43 @@ strong{
 	margin: auto;
 	border-color: green;
 	border-style: dashed;*/
+	margin-right: 10px;
 	border-radius: 20px;
+	text-align: right;
 	max-width: inherit; /* not a default inherited property. Needs to be explitly mentioned. Might exceed otherwise.*/
 }
 
+.main__content__row{
+	border-bottom: 2px #569a6e solid;
+	border-top: 0px #569a6e dashed;
+	border-right: 0px #569a6e dashed;
+	border-left: 0px #569a6e dashed;
+	margin: 0px 10px;
+	padding: 0px 10px;
+}
+
 #img1{
-	width: 300px;
-	height: 300px;
+	width: 100%;
+	max-width: inherit;
 }
 
 .main__content__heading{
-	text-align: center;
+	text-align: inherit;
+	font-weight: 500;
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 950px) {
+@media (max-width: 970px) {
 	.header__content{
-		flex-direction: column;
 		padding: 20px;
 	}
 	
-	.home__page{
+	.main__page{
 		padding-top: 150px;
 	}
 	
-	.main__content{
-		flex-direction: column;
+	#home_page_content.main__content{
+		flex-direction: column-reverse;
 		row-gap: 20px;
     max-width: inherit;
   }
@@ -257,29 +282,38 @@ strong{
 	
 	#img1{
   	width: 80%;
-		height: 100%
   }
-	
 }
 
 @media (max-width: 635px) {
+	.header{
+		position: unset;
+	}
+	
+	.header__content{
+		border-width: 0px 0px 1px 0px;
+		border-style: solid;
+		border-color: #CFC;
+		background-color: #CCEECC55;
+	}
+	
 	.nav__list{
 		flex-direction: column;
 		align-items: center;
 	}
 	
-	.home__page{
-	   padding-top: 340px;
+	.main__page{
+	   padding-top: 50px;
 	}
 	
-	.main__content{
-		flex-direction: column;
+	#home_page_content.main__content{
+		flex-direction: column-reverse;
+		column-gap: 20px;
     max-width: inherit;
   }
 	
 	.main__content__left{
 		width: 90vw;
-		margin: auto;
 		text-align: left;
 		padding: 10px;
 		margin: 10px;
@@ -287,7 +321,6 @@ strong{
 
   .main__content__right{
 		width: 90vw;
-		margin: auto;
 		text-align: center;
 	  padding: 10px;
 		margin: 10px;
@@ -298,7 +331,6 @@ strong{
 	  height: 100%;
   }
 }
-
 
 
 
